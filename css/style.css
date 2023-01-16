@@ -86,24 +86,33 @@ body{
 
 
 @media screen and (max-width:440px){
+    body{
+        margin-top: 3em;
+    }
     .container{
         margin: 5% 2em;
-        max-width: 400px;
+        max-width: 350px;
     }
     .user-details{
         flex-direction: column;
         width: 350px;
     }
+    #user-img img{
+        width: 213px;
+        transform: translate(-50%,-52%);
+    }
     .user-details #user_info #name, #email, #dob, #add, #phone, #pass {
-        transform: translate(-62%,-180px);
+        transform: translate(-67%,-178px);
         font-size: 1.2em;
+        margin-top: 5px;
     }
     .user-details #values{
-        margin: 0 auto;
+        margin: 15px auto 0;
         flex-direction: column;
     }
     .user-details #values li{
-        margin-left: 5em;
+        margin-left: 4em;
+        font-size: 2em;
     }
     #values li:hover::after{
         width: 0;
