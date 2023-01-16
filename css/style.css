@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #2e2e9d;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    position: relative;
+    max-width: 600px;
+    background-color: #fff;
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.3);
+    border-radius: 3px;
+}
+#user-img{
+    min-width: 300px;
+    position: relative;
+}
+#user-img img{
+    position: absolute;
+    width: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-70%);
+    border: 10px solid #dddd;
+    border-radius: 50%;
+}
+.user-details{
+    display: flex;
+    min-width: 550px;
+    position: relative;
+    margin:4em 0 1em;
+    padding: 2em 0 0;
+}
+.user-details #user_info #name,#email,#dob,#add,#phone,#pass{
+    text-align: center;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    position: absolute;
+    padding: 3% 0 1%;
+    min-width: 600px;
+    top: 50%;
+    left: 50%;
+    color: #555;
+    transform: translate(-50%,-70%);
+    visibility: hidden;
+}
+.user-details #values{
+    display: flex;
+    padding: 1.5em 0 0;
+    min-width: 600px;
+    margin: 5% 0 0;
+}
+.user-details #values li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1em;
+    color: #555;
+    margin: 2% auto;
+    font-size: 2em;
+}
+.user-details #values li:hover{
+    color: #5add5a;
+}
+#values li::after{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #555;
+    transition: all 0.5s;
+}
+#values li:hover::after{
+    transition: all 0.5s;
+    width: 30px;
+    background-color: #5add5a;
+}
+
+
+@media screen and (max-width:440px){
+    .container{
+        margin: 5% 2em;
+        max-width: 400px;
+    }
+    .user-details{
+        flex-direction: column;
+        width: 350px;
+    }
+    .user-details #user_info #name, #email, #dob, #add, #phone, #pass {
+        transform: translate(-62%,-180px);
+        font-size: 1.2em;
+    }
+    .user-details #values{
+        margin: 0 auto;
+        flex-direction: column;
+    }
+    .user-details #values li{
+        margin-left: 5em;
+    }
+    #values li:hover::after{
+        width: 0;
+    }
+}

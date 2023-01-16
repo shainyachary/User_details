@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- font awesome link -->
+    <script src="https://kit.fontawesome.com/ccd306c63a.js" crossorigin="anonymous"></script>
+    <!-- css file link -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div id="user-img">
+            <img src="" alt="" id="img">
+        </div>
+        <div class="user-details">
+            <div id="user_info">
+                <p id="name"></p>
+                <p id="email"></p>
+                <p id="dob"></p>
+                <p id="add"></p>
+                <p id="phone"></p>
+                <p id="pass"></p>
+            </div>
+            <ul id="values">
+                <li class="fas fa-user" onmouseout="showData()" onmouseover="showData()" ></li>
+                <li class="fas fa-envelope" onmouseout="showEmail()" onmouseover="showEmail()" ></li>
+                <li class="fas fa-birthday-cake" onmouseout="showDob()" onmouseover="showDob()" ></li>
+                <li class="fas fa-street-view" onmouseout="showAdd()" onmouseover="showAdd()" ></li>
+                <li class="fas fa-phone" onmouseout="showPhone()" onmouseover="showPhone()" ></li>
+                <li class="fas fa-key" onmouseout="showPass()" onmouseover="showPass()" ></li>
+            </ul>
+        </div>
+    </div>
+    
+    <script src="js/script.js"></script>
+
+</body>
+</html>
