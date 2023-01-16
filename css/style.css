@@ -86,9 +86,6 @@ body{
 
 
 @media screen and (max-width:440px){
-    body{
-        margin-top: 1em;
-    }
     .container{
         margin: 5% 2em;
         max-width: 350px;
@@ -98,7 +95,7 @@ body{
         width: 350px;
     }
     #user-img img{
-        width: 213px;
+        width: 220px;
         transform: translate(-50%,-52%);
     }
     .user-details #user_info #name, #email, #dob, #add, #phone, #pass {
