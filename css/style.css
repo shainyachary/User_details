@@ -92,7 +92,7 @@ body{
     }
     .user-details{
         flex-direction: column;
-        width: 350px;
+        width: 400px;
     }
     #user-img img{
         width: 250px;
