@@ -87,7 +87,7 @@ body{
 
 @media screen and (max-width:440px){
     .container{
-        margin: 5% 2em;
+        margin: 3% 2em;
         max-width: 350px;
     }
     .user-details{
@@ -95,8 +95,8 @@ body{
         width: 350px;
     }
     #user-img img{
-        width: 220px;
-        transform: translate(-50%,-52%);
+        width: 250px;
+        transform: translate(-50%,-60%);
     }
     .user-details #user_info #name, #email, #dob, #add, #phone, #pass {
         transform: translate(-67%,-178px);
