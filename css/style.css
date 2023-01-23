@@ -1,117 +1,140 @@
+/* Universal styling */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #2e2e9d;
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
+/* container code starts */
 .container{
-    position: relative;
     max-width: 600px;
+    padding: 1% 1em;
     background-color: #fff;
-    box-shadow: 10px 10px 10px rgba(0,0,0,0.3);
-    border-radius: 3px;
-}
-#user-img{
-    min-width: 300px;
+    border-radius: 0.5em;
+    display: flex;
+    flex-direction: column;
     position: relative;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
 }
-#user-img img{
-    position: absolute;
+/* container code ends */
+/* Profile Image code starts */
+.container .imgbox{
     width: 300px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-70%);
-    border: 10px solid #dddd;
-    border-radius: 50%;
-}
-.user-details{
-    display: flex;
-    min-width: 550px;
+    height: 300px;
     position: relative;
-    margin:4em 0 1em;
-    padding: 2em 0 0;
-}
-.user-details #user_info #name,#email,#dob,#add,#phone,#pass{
-    text-align: center;
-    font-size: 1.5em;
-    text-transform: uppercase;
-    position: absolute;
-    padding: 3% 0 1%;
-    min-width: 600px;
-    top: 50%;
+    border: 10px solid #999;
+    border-radius: 50%;
+    top: 0;
     left: 50%;
+    transform: translate(-50%,-50%);
+    overflow: hidden;
+}
+.container .imgbox img{
+    width: 100%;
+    position: relative;
+}
+/* Profile Image code ends */
+/* user-details code starts */
+.container #content
+{
+    position: relative;
+    padding: 20px;
+    min-width: 450px;
+    margin: -5em 1% -2em;
+    text-align: center;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.container #content h3{
+    font-size: 1.4em;
     color: #555;
-    transform: translate(-50%,-70%);
-    visibility: hidden;
 }
-.user-details #values{
-    display: flex;
-    padding: 1.5em 0 0;
-    min-width: 600px;
-    margin: 5% 0 0;
+.container #content h1{
+    font-size: 1.6em;
+    color: #222;
 }
-.user-details #values li{
-    display: flex;
-    justify-content: center;
+/* user-details code ends */
+/* userinfo code starts */
+.container ul{
+    display: flex;  
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
-    padding: 0 1em;
-    color: #555;
-    margin: 2% auto;
-    font-size: 2em;
+    position: relative;
+    min-width: 450px;
 }
-.user-details #values li:hover{
+.container ul li{
+    margin: 0 1em 0.5em;
+    list-style-type: none;
+    font-size: 2em;
+    cursor: pointer;
+    position: relative;
+    transition: 0.3s;
+}
+.container ul li:hover{
     color: #5add5a;
 }
-#values li::after{
+.container ul li::after{
     content: '';
-    display: block;
-    position: absolute;
-    bottom: 0;
     width: 0;
-    height: 2px;
-    background-color: #555;
-    transition: all 0.5s;
-}
-#values li:hover::after{
-    transition: all 0.5s;
-    width: 30px;
+    margin: auto;
+    position: relative;
+    top: 3px;
+    height: 3px;
     background-color: #5add5a;
+    display: block;
+    transition: 0.3s;
 }
+.container ul li:hover::after{
+    width: 30px;
+}
+/* userinfo code ends */
 
 
-@media screen and (max-width:440px){
+
+@media screen and (max-width:440px)
+{
     .container{
-        margin: 3% 2em;
         max-width: 350px;
+        margin: auto 2em;
     }
-    .user-details{
+    .container .imgbox{
+        width: 200px;
+        height: 200px;
+        transform: translate(-50%,-50%);
+        overflow: hidden;
+    }
+    .container ul{
+        width: 200px;
         flex-direction: column;
-        width: 400px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
     }
-    #user-img img{
-        width: 250px;
-        transform: translate(-50%,-60%);
+    .container ul li{
+        font-size: 1.8em;
     }
-    .user-details #user_info #name, #email, #dob, #add, #phone, #pass {
-        transform: translate(-67%,-178px);
-        font-size: 1.2em;
-        margin-top: 5px;
+    .container #content{
+        position: relative;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        min-width: 300px;
+        margin: -1.5em auto;
     }
-    .user-details #values{
-        margin: 15px auto 0;
-        flex-direction: column;
+    .container #content h3{
+        font-size: 1.1em;
+        color: #555;
     }
-    .user-details #values li{
-        margin-left: 4em;
-        font-size: 2em;
-    }
-    #values li:hover::after{
-        width: 0;
+    .container #content h1{
+        font-size: 1.3em;
+        color: #222;
     }
 }
